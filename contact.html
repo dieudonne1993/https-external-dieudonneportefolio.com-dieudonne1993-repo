@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dieudonné KODJA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Contactez-moi</h2>
+
+        
+        <form id="contactForm" onsubmit="return validerFormulaire()">
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" required><br><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label for="message">Message :</label><br>
+            <textarea id="message" required></textarea><br><br>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+      
+        <h3>Coordonnées</h3>
+        <p>Téléphone : +229 94202101</p>
+        <p>Email : <a href="mailto:christbetsaleelgroup@gmail.com">christbetsaleelgroup@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dieudonné KODJA</p>
+    </footer>
+
+    <script>
+        function validerFormulaire() {
+            var nom = document.getElementById("nom").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (nom === "" || email === "" || message === "") {
+                alert("Tous les champs doivent être remplis.");
+                return false;
+            }
+            alert("Formulaire envoyé !");
+            return true;
+        }
+    </script>
+</body>
+</html>
